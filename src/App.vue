@@ -13,14 +13,18 @@
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script lang="ts">
+import {Vue, Component} from "vue-property-decorator";
+import HelloWorld from "@/components/HelloWorld.vue";
 
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
+@Component(
+  {
+    components: {
+      HelloWorld
+    }
   }
+)
+export default class App extends Vue{
 }
 </script>
 
